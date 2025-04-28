@@ -4,7 +4,7 @@
     reg d;
     wire q;
 
-    d_flip_flop uut (
+    d_ff uut (
         .clk(clk),
         .d(d),
         .q(q)
@@ -30,7 +30,7 @@
         #10;
         
      $dumpfile("dump.vcd"); $dumpvars(1);
-     $finish;
+     #200 $finish;
     end
 
 endmodule
